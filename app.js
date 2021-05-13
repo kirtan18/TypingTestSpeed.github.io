@@ -39,9 +39,10 @@ const endPlay = () => {
     // console.log(totalStr);
     let totalcnt = wordCounter(totalStr);
     let speed = Math.round((totalcnt / totalTime) * 60);
-    let finalMSG = " You typed total at " + speed + " words per minutes, ";
+    let finalMSG = " You typed total at " + speed + " words per minutes,\n";
     finalMSG += compareWords(msg.innerText, totalStr);
     msg.innerText = finalMSG;
+    mywords.value = null;
 };
 
 const compareWords = (str1, str2) => {
